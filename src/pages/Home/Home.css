@@ -1,0 +1,134 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.home__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  align-items: center;
+}
+
+.home__header a {
+  margin-right: 20px;
+  text-decoration: inherit;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 15px;
+}
+
+.home__header a:hover {
+  text-decoration: underline;
+}
+
+.home__headerRight {
+  display: flex;
+  align-items: center;
+  min-width: 13vw;
+  justify-content: space-between;
+}
+
+.home__headerRight > .MuiAvatar-root {
+  margin: 0 20px;
+}
+
+.home__body {
+  flex: 1;
+  display: flex;
+  margin-top: 10%;
+  flex-direction: column;
+}
+
+.home__body > img {
+  object-fit: contain;
+  height: 125px;
+}
+
+.home__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font: normal 500 6rem "Product Sans", sans-serif;
+  white-space: nowrap;
+}
+
+.home__logo .letter {
+  -webkit-animation: bounce 0.75s cubic-bezier(0.05, 0, 0.2, 1) infinite
+    alternate;
+  animation: bounce 0.75s cubic-bezier(0.05, 0, 0.2, 1) infinite alternate;
+  display: inline-block;
+  transform: translate3d(0, 0, 0);
+  margin-top: 0.5em;
+  /* text-shadow: rgba(0, 0, 0, 0.4) 0 0 0.05em; */
+  font: normal 500 6rem "Product Sans", sans-serif;
+}
+.home__logo .letter:nth-child(1) {
+  color: #4285f4;
+}
+.home__logo .letter:nth-child(2) {
+  color: #ea4335;
+}
+.home__logo .letter:nth-child(3) {
+  color: #fbbc05;
+}
+.home__logo .letter:nth-child(4) {
+  color: #4285f4;
+}
+.home__logo .letter:nth-child(5) {
+  color: #34a853;
+}
+.home__logo .letter:nth-child(6) {
+  color: #ea4335;
+}
+.home__logo .letter:nth-child(7) {
+  color: #4285f4;
+}
+
+.drawer {
+  max-width: 500px;
+  padding: 30px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 20px;
+}
+
+.drawer h2 {
+  padding-bottom: 20px;
+}
+
+.drawer p {
+  padding-bottom: 20px;
+  font-size: 14px;
+  font-family: arial, sans-serif;
+  line-height: 1.58;
+}
+
+.drawer pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  overflow-x: scroll;
+  font-size: 11px;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.social {
+  position: absolute;
+  left: 8px;
+  bottom: 5px;
+}
+
+.social img {
+  max-width: 20px;
+}
+
+@media (max-width: 1250px) {
+  .home__logo .letter {
+    font: normal 500 4rem "Product Sans", sans-serif;
+  }
+}
