@@ -59,8 +59,18 @@ export function Home() {
           </p>
           <p>
             You can find how I engineer the prompt{" "}
-            <a href="" target="_blank">
+            <a
+              href="https://github.com/djirdehh/google-search-openai-backend"
+              target="_blank"
+            >
               here
+            </a>
+            . Here is source code for the{" "}
+            <a
+              href="https://github.com/djirdehh/google-search-openai-frontend"
+              target="_blank"
+            >
+              front-end
             </a>
             .
           </p>
