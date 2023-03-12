@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Home, Results } from "./pages";
+import { Home, Results, NotFound } from "./pages";
 import "./index.css";
 
 const App = () => {
@@ -13,6 +13,10 @@ const App = () => {
     {
       path: "/search",
       element: <Results />,
+    },
+    {
+      path: "*",
+      element: <NotFound />,
     },
   ]);
 

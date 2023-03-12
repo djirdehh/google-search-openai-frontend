@@ -14,13 +14,12 @@ export function Results() {
   const [openAIData, setOpenAIData] = React.useState(undefined);
   const [chatGPTMessages, setChatGPTMessages] = React.useState(undefined);
 
-  const searchPrompt = (e) => {
-    e.preventDefault();
-    setOpenAIData(undefined);
-
+  const searchPrompt = () => {
     if (searchParams.get("q") === searchedPrompt) {
       navigate(0);
     } else {
+      setLoading(true);
+      setOpenAIData(undefined);
       setSearchParams({ q: searchedPrompt });
     }
   };
@@ -206,7 +205,13 @@ export function Results() {
                 <span>Loading more responses...</span>
               </>
             ) : (
-              <span>🤖 {openAIData.length} responses</span>
+              <div>
+                <p>🤖 {openAIData.length} responses</p>
+                <p style={{ fontSize: 10, paddingTop: 5 }}>
+                  📣 Links shown below will not consistently work. Read the{" "}
+                  <b>What's This? </b> section in the homepage for more details.
+                </p>
+              </div>
             )}
           </div>
 

@@ -5,12 +5,12 @@ import "./Search.css";
 
 const placeholderArray = [
   "Who is Sam Altman?",
-  "What is the capital of France?",
-  "Where is the Great Barrier Reef located?",
-  "What is the highest mountain in the world?",
-  `Who painted the famous artwork "Starry Night"?`,
-  "Who is Bill Gates?",
-  "What is there to do in Toronto, Canada?",
+  "Vacation tips in Bali",
+  "How to learn web development?",
+  "Mount Everest",
+  `Who is Van Gogh?`,
+  "Bill Gates",
+  "Best doughnuts in Toronto",
 ];
 
 export function Search({
@@ -26,7 +26,7 @@ export function Search({
     placeholderArray[Math.floor(Math.random() * placeholderArray.length)];
 
   return (
-    <form
+    <div
       className="search"
       style={{ display: searchFlex ? "flex" : "initial" }}
     >
@@ -63,7 +63,7 @@ export function Search({
             variant="outlined"
             onClick={() => setDrawer(true)}
           >
-            What is this?
+            What's this?
           </Button>
         </div>
       ) : (
@@ -81,10 +81,10 @@ export function Search({
             variant="outlined"
             onClick={() => setDrawer(true)}
           >
-            What is this?
+            What's this?
           </Button>
         </div>
       )}
-    </form>
+    </div>
   );
 }

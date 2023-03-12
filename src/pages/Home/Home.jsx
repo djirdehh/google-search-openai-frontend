@@ -9,9 +9,7 @@ export function Home() {
   const [drawer, setDrawer] = React.useState(false);
   const [prompt, setPrompt] = React.useState("");
 
-  const searchPrompt = (e) => {
-    e.preventDefault();
-
+  const searchPrompt = () => {
     navigate({
       pathname: "/search",
       search: `?${createSearchParams({ q: prompt })}`,
