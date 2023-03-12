@@ -123,6 +123,10 @@
   bottom: 5px;
 }
 
+.social a {
+  margin-right: 3px;
+}
+
 .social img {
   max-width: 20px;
 }

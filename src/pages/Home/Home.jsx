@@ -58,7 +58,7 @@ export function Home() {
           <p>
             You can find how I engineer the prompt{" "}
             <a
-              href="https://github.com/djirdehh/google-search-openai-backend"
+              href="https://github.com/djirdehh/google-search-openai-backend/blob/main/api/index.js"
               target="_blank"
             >
               here
@@ -113,6 +113,12 @@ export function Home() {
       <div className="social">
         <a href="https://twitter.com/djirdehh" target="_blank">
           <img src="https://img.icons8.com/fluency/512/twitter.png" />
+        </a>
+        <a
+          href="https://github.com/djirdehh/google-search-openai-backend"
+          target="_blank"
+        >
+          <img src="https://img.icons8.com/material-outlined/512/github.png" />
         </a>
       </div>
     </div>

@@ -129,10 +129,6 @@
     flex-direction: column;
   }
 
-  .searchResult__header .search__input {
-    width: 100%;
-  }
-
   .searchResult__header .results__logo {
     margin-right: 1em;
     margin-bottom: 1em;
