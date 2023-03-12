@@ -16,10 +16,13 @@
   padding: 10px 20px;
   font-size: medium;
   border: none;
+  outline: none;
+  background-color: transparent;
 }
 
 .search__input > input:focus {
   outline-width: 0;
+  outline: none;
 }
 
 .search__inputIcon {
