@@ -132,3 +132,16 @@
     font: normal 500 4rem "Product Sans", sans-serif;
   }
 }
+
+@media (max-width: 512px) {
+  .drawer {
+    max-width: 200px;
+    font-size: 12px;
+    padding: 25px;
+  }
+
+  .drawer p {
+    padding-bottom: 10px;
+    font-size: 10px;
+  }
+}
