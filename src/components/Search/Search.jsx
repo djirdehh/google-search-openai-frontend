@@ -1,5 +1,7 @@
 import React from "react";
+import { useVoice } from "../../hooks/useVoice";
 import SearchIcon from "@material-ui/icons/Search";
+import KeyboardVoiceIcon from '@material-ui/icons/KeyboardVoice';
 import { Button } from "@material-ui/core";
 import "./Search.css";
 
@@ -22,6 +24,34 @@ export function Search({
   searchFlex = false,
   hideButtons = false,
 }) {
+  const {
+    text: voiceRecognizedText,
+    isListening,
+    listen,
+    voiceSupported,
+  } = useVoice();
+
+  React.useEffect(() => {
+    if (voiceRecognizedText && !isListening) {
+      setPrompt(voiceRecognizedText);
+    }
+  }, [voiceRecognizedText, isListening]);
+
+  React.useEffect(() => {
+    if (voiceRecognizedText === prompt && searchPrompt) {
+      searchPrompt();
+    }
+  }, [prompt]);
+
+
+  const handleListen = () => {
+    if (voiceSupported) {
+      listen();
+    } else {
+      alert("Voice recognition is not supported by your browser.");
+    }
+  };
+
   const randomPlaceholder =
     placeholderArray[Math.floor(Math.random() * placeholderArray.length)];
 
@@ -44,8 +74,14 @@ export function Search({
               searchPrompt();
             }
           }}
-          placeholder={randomPlaceholder}
+          placeholder={isListening ? "Speak now..." : randomPlaceholder}
         />
+        <div>
+          <KeyboardVoiceIcon 
+            className={`microphone__inputIcon ${isListening && "isListening"}`}
+            onClick={handleListen}
+          />
+        </div>
       </div>
 
       {!hideButtons ? (

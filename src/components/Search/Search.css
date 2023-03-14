@@ -55,3 +55,12 @@
 .search__buttonHidden {
   display: none !important;
 }
+
+.microphone__inputIcon {
+  color: gray;
+  cursor: pointer;
+}
+
+.microphone__inputIcon.isListening {
+  color: red;
+}
